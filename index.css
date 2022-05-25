@@ -1,0 +1,28 @@
+body {
+    background-color: whitesmoke;   
+    display: flex;
+    justify-content: center;
+}
+
+#game {
+    text-align: center;
+    height: 650px;
+    width: 650px;
+    border: 1px solid black;
+}
+
+form {
+    margin: 30px;
+
+}
+
+.num-card {
+    display: inline-flex;
+    height: 15px;
+    width: 15px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+}
