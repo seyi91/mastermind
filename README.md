@@ -1,6 +1,6 @@
 # Mastermind #
 
-Coding Challenge for LinkedIn REACH Back-End Engineer Apprenticeship
+Moshood Adeyemo's Coding Challenge for LinkedIn REACH Back-End Engineer Apprenticeship
 
 ## How to run Mastermind on your machine:
 You muse have node.js installed. If you do not, please install node.js and then follow the steps below to play the game.
