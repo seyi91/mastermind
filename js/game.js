@@ -14,6 +14,8 @@ let attempts = 0;
 let hiScore = 0;
 
 //Helper functions
+
+//retrieves the random 4 digit number from APi
 async function getRandNum() {
     try {
         const response = await axios.get("https://www.random.org/integers/?num=4&min=0&max=7&col=1&base=10&format=plain&rnd=new")
@@ -24,6 +26,7 @@ async function getRandNum() {
     }
 }
 
+//refreshes the page to start a new game
 function newGame() {
     location.reload();
 }
@@ -34,7 +37,7 @@ function checkIfEqual(answer, guess) {
     return false;
 }
 
-// creates a new table row to display user attempts, guesses, and hints
+// creates a new table row to display user attempts, guesses, and hints each turn
 function showUserFeedback() {
     //Select table body
     let tableBody = document.querySelector("tbody");

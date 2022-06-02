@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <link rel="stylesheet" href="game.css" type="text/html">
     <title>Mastermind Game</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -16,19 +15,24 @@
 <body class="text-bg-dark">
     <nav class="navbar">
         <div class="container-fluid justify-content-center bg-info text-dark rounded">
-            <h1>MASTERMIND</h1>
+            <h1><a href="/" class="text-dark text-decoration-none">MASTERMIND</a></h1>
         </div>
     </nav>
 
+
+    <!-- Game container -->
     <div id="game" class="container text-center text-bg-dark">
         <h3>Guess the right combination to win!</h3>
         <div class="row border my-3">
-            <h2>Rules:</h2>
-            <p>When you press PLAY, a secret random 4-digit number will be generated (all digits will be 
-                between 0 and 7). You have 10 attempts to guess the correct 4 digit combination!</p>
+            <h2>How To Play:</h2>
+            <p>A secret random 4-digit number (with all digits between between 0 and 7) has been generated! 
+                You have 10 attempts to guess the correct 4 digit combination!</p>
         </div>
-
+        <!-- High Score Feature will be added here -->
         <!-- <p id="hi-score">High Score:</p> -->
+
+
+        <!-- New Game Button -->
         <button id="new-game" class="btn bg-success mb-3 text-light" onclick=newGame()>New Game</button>
 
         <form>
@@ -36,6 +40,7 @@
             <button id="submit" class="px-5 rounder bg-info text-light rounded border-0">Submit</button>
         </form>
 
+        <!-- Feedback Section -->
         <section id="feedback">
             <table class="table table-bordered  text-bg-dark text-center mt-4">
                 <thead>
@@ -49,7 +54,6 @@
                     <!-- Attempts, guesses, and hints will be displayed here! -->
                 </tbody>
             </table>
-
         </section>
     </div>
 

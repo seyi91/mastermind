@@ -7,8 +7,7 @@ app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
 app.set("view engine", "html");
 
-
-app.use(express.static("public"));
+//configure my views and js folders
 app.use(express.static("views"));
 app.use(express.static("js"));
 
