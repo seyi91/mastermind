@@ -9,36 +9,51 @@
     , initial-scale=1.0">
     <link rel="stylesheet" href="game.css" type="text/html">
     <title>Mastermind Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
-<body>
-    <div id="game">
-        <h1>Mastermind Game</h1>
-        <h2>Guess the right combination to win!</h2>
+<body class="text-bg-dark">
+    <nav class="navbar">
+        <div class="container-fluid justify-content-center bg-info text-dark rounded">
+            <h1>MASTERMIND</h1>
+        </div>
+    </nav>
 
-        <form>
-            <input id="user-guess" placeholder="Enter your guess:">
-            <button id="submit">Submit</button>
-        </form>
-
-
-        <div>
-            <span class="num-btn" id="0">0</span>
-            <span class="num-btn" id="1">1</span>
-            <span class="num-btn" id="2">2</span>
-            <span class="num-btn" id="3">3</span>
-            <span class="num-btn" id="4">4</span>
-            <span class="num-btn" id="5">5</span>
-            <span class="num-btn" id="6">6</span>
-            <span class="num-btn" id="7">7</span>
+    <div id="game" class="container text-center text-bg-dark">
+        <h3>Guess the right combination to win!</h3>
+        <div class="row border my-3">
+            <h2>Rules:</h2>
+            <p>When you press PLAY, a secret random 4-digit number will be generated (all digits will be 
+                between 0 and 7). You have 10 attempts to guess the correct 4 digit combination!</p>
         </div>
 
-        <section id="guesses">
-            Your guesses:
+        <!-- <p id="hi-score">High Score:</p> -->
+        <button id="new-game" class="btn bg-success mb-3 text-light" onclick=newGame()>New Game</button>
+
+        <form>
+            <input id="user-guess" class="px-5 border-0 text-info" type="number" placeholder="Enter your guess:">
+            <button id="submit" class="px-5 rounder bg-info text-light rounded border-0">Submit</button>
+        </form>
+
+        <section id="feedback">
+            <table class="table table-bordered  text-bg-dark text-center mt-4">
+                <thead>
+                    <tr class="fw-bold">
+                        <td class>Attempt #</td>
+                        <td>Your Guess</td>
+                        <td>Hints</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Attempts, guesses, and hints will be displayed here! -->
+                </tbody>
+            </table>
+
         </section>
     </div>
 
-    <script src="app.js"></script>
+    <script src="game.js"></script>
 </body>
 
 </html>
