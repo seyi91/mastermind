@@ -89,8 +89,7 @@ form.addEventListener("submit", (event) => {
 
             showUserFeedback();
             if (attempts === 10) {
-                alert('You lose! Maximum attempts reached.');
-                location.reload();
+                alert(`You lose, the answer was ${answer}! Press New Game to play again.`);
             }
         } else {
             //if userGuess is equal to the answer
